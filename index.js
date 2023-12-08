@@ -7,26 +7,39 @@ const { displaySVGData } = require('./SVG_Creater');
 const questions = [
     {
         type: 'input',
-        name: 'color',
-        message: 'What color would you like the SVG to be? '
+        name: 'ShapeColor',
+        message: 'What color would you like your SVG to be? '
     },
     {
         type: 'input',
-        name: 'text',
-        message: 'What text would you like the SVG to have? '
+        name: 'TextColor',
+        message: 'What color would you like your SVG text to be? '
+    },
+    {
+        type: 'input',
+        name: 'Text',
+        message: 'What text would you like the SVG to have? ',
+        validate: (answer) => {
+            if(answer.length > 3) {
+                return 'Answer is too long must be 3 characters or less!';
+            }
+            return true;
+        }
     },
     {
         type: 'list',
-        name: 'shape',
-        message: 'What shape would you like the SVG to be? ',
-        choices: ['Circle, Square', 'Triangle', 'Rectangle', 'Pentagon', 'Hexagon', 'Octagon', 'Oval']
+        name: 'Shape',
+        message: 'What shape would you like your SVG to be? ',
+        choices: ['Circle', 'Rectangle', 'Ellipse', 'Polygon']
     }
 ]
 
 
 // Creates new SVG file with users specified attributes
 function createSVG(usersResponse) {
-    writeFile('./Assets/circle.svg', displaySVGData(usersResponse), (error) => {
+    usersResponse.ShapeColor = usersResponse.ShapeColor.toLowerCase();
+    usersResponse.TextColor = usersResponse.TextColor.toLowerCase();
+    writeFile(`./Assets/Logo.svg`, displaySVGData(usersResponse), (error) => {
         console.log(error);
     })
 }
