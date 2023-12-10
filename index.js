@@ -45,7 +45,7 @@ function createSVG(usersResponse) {
     usersResponse.ShapeColor = usersResponse.ShapeColor.toLowerCase();
     usersResponse.TextColor = usersResponse.TextColor.toLowerCase();
     writeFile(`./Assets/Logo.svg`, displaySVGData(usersResponse), (error) => {
-        console.log(error);
+        if(error) rconsole.log(error);
     })
 }
 
