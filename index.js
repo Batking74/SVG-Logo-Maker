@@ -1,38 +1,43 @@
+// Declaring Variables
 const { prompt } = require('inquirer');
 const { writeFile } = require('fs');
 const { displaySVGData } = require('./SVG_Creater');
 
 
-// Questions that I will prompt the user to answer
-const questions = [
-    {
-        type: 'input',
-        name: 'ShapeColor',
-        message: 'What color would you like your SVG to be? '
-    },
-    {
-        type: 'input',
-        name: 'TextColor',
-        message: 'What color would you like your SVG text to be? '
-    },
-    {
-        type: 'input',
-        name: 'Text',
-        message: 'What text would you like the SVG to have? ',
-        validate: (answer) => {
-            if(answer.length > 3) {
-                return 'Answer is too long must be 3 characters or less!';
-            }
-            return true;
-        }
-    },
-    {
-        type: 'list',
-        name: 'Shape',
-        message: 'What shape would you like your SVG to be? ',
-        choices: ['Circle', 'Rectangle', 'Ellipse', 'Polygon']
+// Creating Questions class
+class Question {
+    constructor(type, name, message) {
+        this.type = type;
+        this.name = name;
+        this.message = message;
     }
-]
+}
+
+
+// Creating list class
+class list extends Question {
+    constructor(type, name, message, choices) {
+        super(type, name, message);
+        this.choices = choices;
+    }
+    validate(answer) {
+        if(answer.length > 3) {
+            return 'Answer is too long must be 3 characters or less!';
+        }
+        return true;
+    }
+}
+
+
+// Instantiating Objects
+const question1 = new Question('input', 'ShapeColor', 'What color would you like your SVG to be? ');
+const question2 = new Question('input', 'TextColor', 'What color would you like your SVG text to be? ');
+const question3 = new Question('input', 'Text', 'What text would you like the SVG to have? ');
+const question4 = new list('list', 'Shape', 'What shape would you like your SVG to be? ', ['Circle', 'Rectangle', 'Ellipse', 'Polygon']);
+
+
+// Grouping Question objects together
+const questions = [question1, question2, question3, question4];
 
 
 // Creates new SVG file with users specified attributes
