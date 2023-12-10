@@ -1,11 +1,10 @@
 # SVG Logo Maker
+![Nazirs SVG Logo Maker Project Image](./Assets/Nazirs-SVG-Logo-Maker-Project.webp)
 
 ## Description
 The SVG Logo Maker is a Node.js application that simplifies logo creation by generating a logo just by typing! Easily design logos by manipulating shapes and colors, all within the convenience of this Node.js tool.
 
-
-![Nazirs SVG Logo Maker Project Image](./Assets/Nazirs-SVG-Logo-Maker-Project.webp)
-![Nazirs SVG Logo Maker Project gif]()
+[![Image of Nazirs Professional README Generator Video](./Assets/Example%20-%2012_10_2023.png)](./Assets/SVG-Logo-Maker%20-%202023-12-10.mp4)
 
 ### Usage
 
