@@ -4,8 +4,6 @@
 ## Description
 The SVG Logo Maker is a Node.js application that simplifies logo creation by generating a logo just by typing! Easily design logos by manipulating shapes and colors, all within the convenience of this Node.js tool.
 
-[![Image of Nazirs Professional README Generator Video](./Assets/Example%20-%2012_10_2023.png)](./Assets/SVG-Logo-Maker%20-%202023-12-10.mp4)
-
 ### Usage
 
 1. Initiate npm using the following command:
@@ -37,5 +35,21 @@ node index.js <OR> npm start
 - inquirer
 - fs
 
+
+## Test Results
+```bash
+PASS ./shapes.test.js (6.383 s)SVG to be?  
+  Question Attributes
+    √ Question instance is created correctly (3 ms)
+  Returns a Circle String HTML Element
+    √ Checking Circle Class
+  Returns a Rectangle String HTML Element
+    √ Checking Rectangle Class
+  Returns an Ellipse String HTML Element
+    √ Checking Ellipse Class (1 ms)
+  Returns a Polygon String HTML Element
+    √ Checking Polygon Class (1 ms)
+
+Video of Application: https://www.youtube.com/watch?v=8H83Leu1Hws
 
 GitHub Repo: https://github.com/Batking74/SVG-Logo-Maker
