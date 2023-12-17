@@ -49,7 +49,7 @@ PASS ./shapes.test.js (6.383 s)SVG to be?
     √ Checking Ellipse Class (1 ms)
   Returns a Polygon String HTML Element
     √ Checking Polygon Class (1 ms)
-
+```
 Video of Application: https://www.youtube.com/watch?v=8H83Leu1Hws
 
 GitHub Repo: https://github.com/Batking74/SVG-Logo-Maker
