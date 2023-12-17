@@ -38,17 +38,25 @@ node index.js <OR> npm start
 
 ## Test Results
 ```bash
-PASS ./shapes.test.js (6.383 s)SVG to be?  
-  Question Attributes
-    √ Question instance is created correctly (3 ms)
-  Returns a Circle String HTML Element
-    √ Checking Circle Class
-  Returns a Rectangle String HTML Element
-    √ Checking Rectangle Class
-  Returns an Ellipse String HTML Element
-    √ Checking Ellipse Class (1 ms)
-  Returns a Polygon String HTML Element
-    √ Checking Polygon Class (1 ms)
+ PASS  ./shapes.test.jslike your SVG to be?  
+  Question Class Instantiation Test
+    √ Should return an object containing the type, name, and message values (2 ms)
+  Circle Class Instantiation Test
+    √ Should return a string circle HTML element with different attributes (1 ms)
+  Rectangle Class Instantiation Test
+    √ Should return a string rect HTML element with different attributes
+  Ellipse Class Instantiation Test
+    √ Should return a string ellipse HTML element with different attributes
+  Polygon Class Instantiation Test
+    √ Should return a string polygon HTML element with different attributes (1 ms)
+  Create SVG Funtion tests results
+    √ Should return SVG Created Successfully! (1 ms)
+
+Test Suites: 1 passed, 1 total                                                                                                                                                                          
+Tests:       6 passed, 6 total                                                                                                                                                                          
+Snapshots:   0 total
+Time:        1.096 s
+Ran all test suites.
 ```
 Video of Application: https://www.youtube.com/watch?v=8H83Leu1Hws
 

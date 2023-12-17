@@ -45,8 +45,12 @@ function createSVG(usersResponse) {
     usersResponse.ShapeColor = usersResponse.ShapeColor.toLowerCase();
     usersResponse.TextColor = usersResponse.TextColor.toLowerCase();
     writeFile(`./Assets/Logo.svg`, displaySVGData(usersResponse), (error) => {
-        if(error) console.error(`Something went wrong in CreateSVG Funtion: ${error.message}`);
+        if(error) {
+            console.error(`Something went wrong in CreateSVG Funtion: ${error.message}`);
+            throw error;
+        }
     })
+    return 'SVG Created Successfully!';
 }
 
 
@@ -61,4 +65,4 @@ prompt(questions)
 
 
 // Exporting Class
-module.exports = Question;
+module.exports = { Question, createSVG };
